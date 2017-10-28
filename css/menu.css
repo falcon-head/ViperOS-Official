@@ -1,0 +1,142 @@
+/* Changelog
+This css file is for the menu
+*/
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+
+/* OPEN / CLOSE BTNS */
+
+.menu-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 999;
+    display: inline;
+    font-size: 32px;
+}
+
+.menu-btn a {
+    display: inline-block;
+    text-decoration: none;
+    /* safari hack */
+}
+
+.btn-open:after {
+    color: #333;
+    content: "\f394";
+    font-family: "Ionicons";
+    -webkit-transition: all .2s linear 0s;
+    -moz-transition: all .2s linear 0s;
+    -o-transition: all .2s linear 0s;
+    transition-property: all .2s linear 0s;
+}
+
+.btn-open:hover:after {
+    color: #1E88E5;
+}
+
+.btn-close:after {
+    color: #fff;
+    content: "\f2d7";
+    font-family: "Ionicons";
+    -webkit-transition: all .2s linear 0s;
+    -moz-transition: all .2s linear 0s;
+    -o-transition: all .2s linear 0s;
+    transition-property: all .2s linear 0s;
+}
+
+.btn-close:hover:after {
+    color: #f44336;
+}
+
+
+/* OVERLAY */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    display: none;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  /*  background: #1E88E5;   color of the overlay */
+}
+
+.overlay-gradient {
+  background: rgba(73,155,234,1);
+  background: -moz-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 31%, rgba(32,124,229,1) 69%, rgba(32,124,229,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(31%, rgba(73,155,234,1)), color-stop(69%, rgba(32,124,229,1)), color-stop(100%, rgba(32,124,229,1)));
+  background: -webkit-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 31%, rgba(32,124,229,1) 69%, rgba(32,124,229,1) 100%);
+  background: -o-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 31%, rgba(32,124,229,1) 69%, rgba(32,124,229,1) 100%);
+  background: -ms-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 31%, rgba(32,124,229,1) 69%, rgba(32,124,229,1) 100%);
+  background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 31%, rgba(32,124,229,1) 69%, rgba(32,124,229,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menu li {
+    display: table;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 25%;
+    list-style: none;
+    text-align: center;
+    -webkit-transition: all .2s linear 0s;
+    -moz-transition: all .2s linear 0s;
+    -o-transition: all .2s linear 0s;
+    transition-property: all .2s linear 0s;
+}
+
+.menu li a {
+    display: table-cell;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.menu li:hover {
+    background: #2196F3;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        right: 25px;
+    }
+
+    .menu li:hover {
+        background: #2196F3;
+    }
+}

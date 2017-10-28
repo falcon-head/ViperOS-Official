@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <!-- changelog
-  I did not touch this file :)
+  Added the menu button.
+  We can paper trail the menu color in the menu.css [if we want]
 -->
 
   <!-- Basic Page Needs
@@ -26,12 +27,13 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600,900" rel="stylesheet" type="text/css">
 
-
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -41,29 +43,37 @@
 
   <!-- Dependencies
   __________________________________________________ -->
-
+  <script src="js/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
-    <!-- Primary Page Layout
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="one column">
-          <!--  <a href="viperOS.html" id="logo">ViperOS</a> -->
-          <img src="images/viperOS.png" alt="viperOS" id="logo"style="width:160px;height:46px;">
-          </div>
-          <div class="eleven columns padding-top"></div>
-            <ul>
-              <li><a href="#feature">Feature</a></li>
+
+<!-- hamberger like menu navigation
+________________________________________________________-->
+  <div class="menu-btn">
+      <a class="btn-open" href="javascript:void(0)"></a>
+  </div>
+
+  <div class="overlay overlay-gradient">
+      <div class="menu">
+          <ul>
+              <li><a href="#feature">Home</a></li>
               <li><a href="#Theme">Theme</a></li>
               <li><a href="download.html">Downloads</a></li>
               <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
+          </ul>
       </div>
-    </header>
+  </div>
+
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <img src="images/viperOS.png" alt="viperOS" style="width:160px;height:46px;"></img>
+      </div>
+    </div>
+  </div>
+</header>
 
     <!-- Features venom customization
     ____________________________________________________ -->
@@ -138,6 +148,30 @@
             </div>
           </div>
         </div>
+
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script>
+        $(document).ready(function () {
+
+            $(".menu-btn a").click(function () {
+                $(".overlay").fadeToggle(200);
+                $(this).toggleClass('btn-open').toggleClass('btn-close');
+            });
+/*       this code will toggle back the overlay on click which we not need so commented out
+
+            $('.overlay').on('click', function () {
+                $(".overlay").fadeToggle(200);
+                $(".menu-btn a").toggleClass('btn-open').toggleClass('btn-close');
+            });
+            */
+
+            $('.menu a').on('click', function () {
+                $(".overlay").fadeToggle(200);
+                $(".menu-btn a").toggleClass('btn-open').toggleClass('btn-close');
+            });
+
+        });
+        </script>
 <!-- The footers for the viperOS
 ______________________________________________________________________-->
 <div class="container" style="padding:30px;"></div>  <!-- for the gap between cards and the footer -->
