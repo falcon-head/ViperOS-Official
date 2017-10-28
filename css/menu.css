@@ -38,7 +38,7 @@ a {
 }
 
 .btn-open:after {
-    color: #333;
+    color: #ffffff;
     content: "\f394";
     font-family: "Ionicons";
     -webkit-transition: all .2s linear 0s;
@@ -48,11 +48,11 @@ a {
 }
 
 .btn-open:hover:after {
-    color: #333;
+    color: #ffffff;
 }
 
 .btn-close:after {
-    color: #fff;
+    color: #ffffff;
     content: "\f2d7";
     font-family: "Ionicons";
     -webkit-transition: all .2s linear 0s;
@@ -62,7 +62,7 @@ a {
 }
 
 .btn-close:hover:after {
-    color: #333;
+    color: #ffffff;
 }
 
 
