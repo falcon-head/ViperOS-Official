@@ -48,7 +48,7 @@ a {
 }
 
 .btn-open:hover:after {
-    color: #1E88E5;
+    color: #333;
 }
 
 .btn-close:after {
