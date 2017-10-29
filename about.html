@@ -31,6 +31,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -40,26 +42,35 @@
 
   <!-- Dependencies
   __________________________________________________ -->
-
+  <script src="js/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
-    <!-- Primary Page Layout
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="one column">
-          <!--  <a href="viperOS.html" id="logo">ViperOS</a> -->
-          <img src="images/viperOS.png" alt="viperOS" id="logo"style="width:160px;height:46px;">
-          </div>
-          <div class="eleven columns padding-top"></div>
-            <ul>
-              <li><a href="index.html">Back</a></li>
-            </ul>
-        </div>
+
+<!-- hamberger like menu navigation
+________________________________________________________-->
+  <div class="menu-btn">
+      <a class="btn-open" href="javascript:void(0)"></a>
+  </div>
+
+  <div class="overlay overlay-gradient">
+      <div class="menu">
+          <ul>
+              <li><a href="download.html">Downloads</a></li>
+              <li><a href="index.html">Home</a></li>
+          </ul>
       </div>
-    </header>
+  </div>
+
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <center><img src="images/viperOS.png" alt="viperOS" style="width:180px;height:51px;"></img></center>
+      </div>
+    </div>
+  </div>
+</header>
 
   <!-- Cards devices
   ___________________________________________________________-->
@@ -70,7 +81,7 @@
 <h5 style="text-align:center"><b>ViperOS Project</b></h5>
 <center>
 <div class="carde">
-  <img src="images/vp.png" alt="vp" style="width:100px">
+  <img src="images/team/vp.png" alt="vp" style="width:100px">
   <h6 class="title" style="  text-align: center;"><b>The Viper Project is a Brazilian Open Source Team Project. We believe in Dreams Come True.<br>Our mission is Innovation and Digital Inclusion.<br>Together We Are Stronger.</b></h6>
   <h5><b style="color:#4285f4">#StayViper</b></h5>
  <br>
@@ -85,7 +96,7 @@
 <div class="row">
 <div class="four columns" style="padding-bottom:10px;">
 <div class="carde">
-  <img src="images/bj.png" alt="bj" style="width:100px">
+  <img src="images/team/bj.png" alt="bj" style="width:100px">
   <h5><b>Gustavo Campos <br>(BiRDMan)</b></h5>
   <p class="title">Founder | Lead Developer </p>
     <a style="color:#000000" href="https://plus.google.com/108014036384818013467"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
@@ -96,7 +107,7 @@
 
 <div class="four columns" style="padding-bottom:10px;">
 <div class="carde">
-  <img src="images/jb.png" alt="jb" style="width:100px">
+  <img src="images/team/jb.png" alt="jb" style="width:100px">
   <h5><b>Jonathan Bruno <br>(JBCDroid)</b></h5>
   <p class="title">Founder | Co-Lead Developer </p>
     <a style="color:#000000" href="https://plus.google.com/117127365536325265319"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
@@ -107,7 +118,7 @@
 
 <div class="four columns" style="padding-bottom:10px;">
 <div class="carde">
-  <img src="images/bc.png" alt="bc" style="width:100px">
+  <img src="images/team/bc.png" alt="bc" style="width:100px">
   <h5><b>Bruno Cortez <br>(Bruno Cortez)</b></h5>
   <p class="title">Social Coordinator | Moderator </p>
     <a style="color:#000000" href="https://plus.google.com/117127365536325265319"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
@@ -120,7 +131,7 @@
 <div class="row">
 <div class="four columns" style="padding-bottom:10px;">
 <div class="carde">
-  <img src="images/es.png" alt="es" style="width:100px">
+  <img src="images/team/es.png" alt="es" style="width:100px">
   <h5><b>Esrom Cataneo <br>(EsROM Tech)</b></h5>
   <p class="title">Developer | Device Maintainer </p>
     <a style="color:#000000" href="https://plus.google.com/102279162181166812715"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
@@ -131,7 +142,7 @@
 
 <div class="four columns" style="padding-bottom:10px;">
 <div class="carde">
-  <img src="images/rk.png" alt="rk" style="width:100px">
+  <img src="images/team/rk.png" alt="rk" style="width:100px">
   <h5><b>RK Schunk <br>(Rkschunk)</b></h5>
   <p class="title">Developer | Device Maintainer </p>
     <a style="color:#000000" href="https://plus.google.com/116790734458637436844"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
@@ -142,7 +153,7 @@
 
 <div class="four columns" style="padding-bottom:10px;">
 <div class="carde">
-  <img src="images/ga.png" alt="ga" style="width:100px">
+  <img src="images/team/ga.png" alt="ga" style="width:100px">
   <h5><b>Gyu August <br>(GYUPRO5)</b></h5>
   <p class="title">Developer | Device Maintainer </p>
     <a style="color:#000000" href="https://plus.google.com/106987460659854873924"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
@@ -155,7 +166,7 @@
 <div class="row">
 <div class="four columns" style="padding-bottom:10px;">
 <div class="carde">
-  <img src="images/ma.png" alt="ma" style="width:100px">
+  <img src="images/team/ma.png" alt="ma" style="width:100px">
   <h5><b>Matheus A. Fernandes <br>(matheeusaf)</b></h5>
   <p class="title">Developer | Device Maintainer </p>
     <a style="color:#000000" href="https://plus.google.com/105437094001809852088"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
@@ -166,7 +177,7 @@
 
 <div class="four columns" style="padding-bottom:10px;">
 <div class="carde">
-  <img src="images/rm.png" alt="rm" style="width:100px">
+  <img src="images/team/rm.png" alt="rm" style="width:100px">
   <h5><b>Rafael Marchetto <br>(RMarchetto96)</b></h5>
   <p class="title">Developer | Device Maintainer </p>
     <a style="color:#000000" href="https://plus.google.com/106728616656219510071"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
@@ -177,7 +188,7 @@
 
 <div class="four columns" style="padding-bottom:10px;">
 <div class="carde">
-  <img src="images/rq.png" alt="rq" style="width:100px">
+  <img src="images/team/rq.png" alt="rq" style="width:100px">
   <h5><b>Renan Queiroz <br>(renanqueiroz)</b></h5>
   <p class="title">Developer | Device Maintainer </p>
     <a style="color:#000000" href="https://plus.google.com/100865738274552922307"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
@@ -187,10 +198,12 @@
 </div>
 </div>
 
+
+<center>
+<div class="six columns" style="padding-bottom:10px;">
 <div class="row">
-<div class="four columns" style="padding-bottom:10px;">
 <div class="carde">
-  <img src="images/fk.png" alt="fk" style="width:100px">
+  <img src="images/team/fk.png" alt="fk" style="width:100px">
   <h5><b>Fabian Kawashima <br>(Smart DeTodos)</b></h5>
   <p class="title">Public Relations | Process Management </p>
     <a style="color:#000000" href="https://plus.google.com/114604031049535245686"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
@@ -198,10 +211,12 @@
  <br>
 </div>
 </div>
+</div>
 
-<div class="four columns" style="padding-bottom:10px;">
+<div class="six columns" style="padding-bottom:10px;">
+<div class="row">
 <div class="carde">
-  <img src="images/kitty.png" alt="skj" style="width:100px">
+  <img src="images/team/kitty.png" alt="skj" style="width:100px">
   <h5><b>Shrikrishna Joisa <br>(falcon-head)</b></h5>
   <p class="title">Web Developer | Website Maintainer </p>
     <a style="color:#000000" href="https://plus.google.com/+ShrikrishnaJoisa"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
@@ -209,8 +224,34 @@
  <br>
 </div>
 </div>
-
 </div>
+</center>
+
+<!-- script hamberger like menu navigation -->
+
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script>
+        $(document).ready(function () {
+
+            $(".menu-btn a").click(function () {
+                $(".overlay").fadeToggle(200);
+                $(this).toggleClass('btn-open').toggleClass('btn-close');
+            });
+/*       this code will toggle back the overlay on click which we not need so commented out
+
+            $('.overlay').on('click', function () {
+                $(".overlay").fadeToggle(200);
+                $(".menu-btn a").toggleClass('btn-open').toggleClass('btn-close');
+            });
+            */
+
+            $('.menu a').on('click', function () {
+                $(".overlay").fadeToggle(200);
+                $(".menu-btn a").toggleClass('btn-open').toggleClass('btn-close');
+            });
+
+        });
+        </script>
 
 <!-- The footers for the viperOS
 ______________________________________________________________________-->
