@@ -4,10 +4,12 @@ body, html {
   background-color: #3F51B5;
   */
 }
+
 header {
   background-color: #4285f4;
   padding: 15px;
 }
+
 #logo {
   font-weight: 999;
   font-size: 25px;
@@ -16,15 +18,18 @@ header {
   text-decoration: none;
   color: white;
 }
+
 header ul {
   list-style-type: none;
   float: right;
   margin: 0;
 }
+
 header ul li {
   float: left;
   margin-bottom: 0;
 }
+
 header ul li a {
   color: gray;
   font-size: 1.6rem;
@@ -34,6 +39,7 @@ header ul li a {
   text-decoration: none;
   color: white;
 }
+
 .padding-top {
   /* Top padding added for the screenshot feature etc to align with viper logo*/
   padding-top: 7px;
@@ -61,6 +67,7 @@ p.subtext {
   font-size: 2rem;
   line-height: 2.3rem;
 }
+
 #pixel {
   max-width: 100%;
   padding-left: 70px;
@@ -68,12 +75,12 @@ p.subtext {
   display: block;
   max-width: 48%;
 }
-.card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.19);
-    transition: 0.3s;
-    padding: 15px;
 
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+  padding: 15px;
 }
 
 .carde {
@@ -87,33 +94,33 @@ p.subtext {
 }
 
 /* On mouse-over, add a deeper shadow */
+
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+
 /* For the size of the logos in the footer */
+
 .footer-font {
   font-size: 36px;
 }
 
 /** On small devices the web looks */
-@media(max-width:550px) {
 
+@media(max-width:550px) {
   #logo {
     display: block;
     margin-bottom: 1rem;
   }
-
   ul {
     width: 100%;
   }
-
   ul li {
     display: block;
     width: 100%;
     margin: 1px 0 0 0;
     padding: 0;
   }
-
   header ul li a {
     margin-left: 0;
     width: 100%;
@@ -121,44 +128,58 @@ p.subtext {
     border-bottom: 1px solid lightgray;
     padding: 5px;
   }
-
   header ul li:last-child a {
     border-bottom: 0;
     padding-bottom: 0;
   }
-
   .padding {
     padding-top: 1.5em;
   }
   .padding2 {
     padding-top: 3em;
   }
-
   #pixel {
     float: left;
     max-width: 60%;
+  }
+  @media(max-width:750px) {
+    h4 {
+      font-size: 1.6em;
+      white-space: nowrap;
+    }
+    #plate {
+      float: left;
+    }
+  }
+  /* Rules for sizing the icon. */
+  .material-icons.md-18 {
+    font-size: 18px;
+  }
+  .material-icons.md-24 {
+    font-size: 24px;
+  }
+  .material-icons.md-36 {
+    font-size: 36px;
+  }
+  .material-icons.md-48 {
+    font-size: 48px;
+  }
+  /* Rules for using icons as black on a light background. */
+  .material-icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  .material-icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+  }
+  /* Rules for using icons as white on a dark background. */
+  .material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
+  }
+  .material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
-@media(max-width:750px) {
-  h4 {
-    font-size: 1.6em;
-    white-space: nowrap;
-  }
-  #plate {
-    float: left;
-  }
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
 }
-
-/* Rules for sizing the icon. */
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
-
-/* Rules for using icons as black on a light background. */
-.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
-
-/* Rules for using icons as white on a dark background. */
-.material-icons.md-light { color: rgba(255, 255, 255, 1); }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
