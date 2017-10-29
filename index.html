@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <html xmlns='http://www.w3.org/1999/xhtml' xmlns:og='http://ogp.me/ns#'>
+
 <head>
   <!-- changelog
   Added the menu button.
@@ -49,54 +50,84 @@
   <!-- Dependencies
   __________________________________________________ -->
   <script src="js/modernizr-2.8.3.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Test Anime script -->
+  <script>
+    $(document).ready(function() {
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function() {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+  </script>
 </head>
 
 <body>
 
-<!-- hamberger like menu navigation
+  <!-- hamberger like menu navigation
 ________________________________________________________-->
   <div class="menu-btn">
-      <a class="btn-open" href="javascript:void(0)"></a>
+    <a class="btn-open" href="javascript:void(0)"></a>
   </div>
 
   <div class="overlay overlay-gradient">
-      <div class="menu">
-          <ul>
-              <li><a href="#feature">Home</a></li>
-              <li><a href="#Theme">Theme</a></li>
-              <li><a href="download.html">Downloads</a></li>
-              <li><a href="about.html">About</a></li>
-          </ul>
-      </div>
-  </div>
-
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="column">
-        <center><img src="images/viperOS.png" alt="viperOS" style="width:180px;height:51px;"></img></center>
-      </div>
+    <div class="menu">
+      <ul>
+        <li><a href="#feature">Feature</a></li>
+        <li><a href="#Theme">Theme</a></li>
+        <li><a href="download.html">Downloads</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
     </div>
   </div>
-</header>
 
-    <!-- ViperOS description
-    ____________________________________________________ -->
-    <div class="container padding" id="viperos">
+  <header>
+    <div class="container">
       <div class="row">
-        <div class="one-half column">
-          <h1 id="uc" style="font-weight:900">ViperOS Project</h1>
-          <p class="subtext" style="font-size:18px;">ViperOS It's Stable and Battery Friendly Custom ROM. Many features, High Performance and Reability. Feel the Venom in your vein.</p>
-        </div>
-        <div class="one-half column">
-          <img src="images/pixel3.png" alt="viperOSDemo" id="pixel">
+        <div class="column">
+          <center><img src="images/viperOS.png" alt="viperOS" style="width:180px;height:51px;"></img>
+          </center>
         </div>
       </div>
     </div>
+  </header>
 
-    <!-- Theming and substratum
+  <!-- ViperOS description
+    ____________________________________________________ -->
+  <div class="container padding" id="viperos">
+    <div class="row">
+      <div class="one-half column">
+        <h1 id="uc" style="font-weight:900">ViperOS Project</h1>
+        <p class="subtext" style="font-size:18px;">ViperOS It's Stable and Battery Friendly Custom ROM. Many features, High Performance and Reability. Feel the Venom in your vein.</p>
+      </div>
+      <div class="one-half column">
+        <img src="images/pixel3.png" alt="viperOSDemo" id="pixel">
+      </div>
+    </div>
+  </div>
+
+  <!-- Theming and substratum
     ________________________________________________________-->
-<div style="background-color:#4285f4;" id="Theme">
+  <div style="background-color:#4285f4;" id="Theme">
     <div class="container padding">
       <div class="row">
         <div class="one-half column">
@@ -110,28 +141,28 @@ ________________________________________________________-->
     </div>
   </div>
 
-    <!-- Features venom customization
+  <!-- Features venom customization
     ____________________________________________________ -->
-    <div class="container padding" id="feature">
-      <div class="row">
-        <div class="one-half column">
-          <h1 id="uc" style="font-weight:900">Venom</h1>
-          <p class="subtext" style="font-size:18px;">It's a powerfull and integrated Viper SystemUI engine that brings many customizations, from lockscreen to powermenu.</p>
-        </div>
-        <div class="one-half column">
-          <img src="images/pixel.png" alt="viperOSDemo" id="pixel">
-        </div>
+  <div class="container padding" id="feature">
+    <div class="row">
+      <div class="one-half column">
+        <h1 id="uc" style="font-weight:900">Venom</h1>
+        <p class="subtext" style="font-size:18px;">Venom is a powerfull and integrated Viper SystemUI engine that brings many customizations, from lockscreen to powermenu.</p>
+      </div>
+      <div class="one-half column">
+        <img src="images/pixel.png" alt="viperOSDemo" id="pixel">
       </div>
     </div>
+  </div>
 
   <!-- Cards
   ___________________________________________________________-->
 
-<div style="padding: 15px;">
-  <div class="row">
-    <div class="three columns" style="padding-bottom:10px;">
-      <div class="card padding">
-        <center><img src="images/rocket.png" alt="performance" style="height:50px;"></center>
+  <div style="padding: 15px;">
+    <div class="row">
+      <div class="three columns" style="padding-bottom:10px;">
+        <div class="card padding">
+          <center><img src="images/rocket.png" alt="performance" style="height:50px;"></center>
           <div class="container">
             <h4 style="text-align:center"><b>Stable</b></h4>
             <p>Every build provided is stable and performance driven without any lags.</p>
@@ -141,70 +172,75 @@ ________________________________________________________-->
       <div class="three columns" style="padding-bottom:10px;">
         <div class="card padding">
           <center><img src="images/github.png" alt="performance" style="height:50px;"></center>
-            <div class="container">
-              <h4 style="text-align:center;"><b>Open Source</b></h4>
-              <p>Our source code is opensource hence anyone can build for any devices.</p>
-            </div>
+          <div class="container">
+            <h4 style="text-align:center;"><b>Open Source</b></h4>
+            <p>Our source code is opensource hence anyone can build for any devices.</p>
           </div>
         </div>
-        <div class="three columns" style="padding-bottom:10px;">
-          <div class="card padding">
-            <center><img src="images/battery.png" alt="performance" style="height:50px;"></center>
-              <div class="container">
-                <h4 style="text-align:center"><b>Battery</b></h4>
-                <p>Our software is optimized to give your device a long battery life Optimizations OS battery-friendly.</p>
-              </div>
-            </div>
-          </div>
-          <div class="three columns" style="padding-bottom:10px;">
-            <div class="card padding">
-              <center><img src="images/ota.png" alt="performance" style="height:50px;"></center>
-                <div class="container">
-                  <h4 style="text-align:center"><b>OTA</b></h4>
-                  <p>You will get the latest software updates via Over-The-Air notification.</p>
-                </div>
-              </div>
-            </div>
+      </div>
+      <div class="three columns" style="padding-bottom:10px;">
+        <div class="card padding">
+          <center><img src="images/battery.png" alt="performance" style="height:50px;"></center>
+          <div class="container">
+            <h4 style="text-align:center"><b>Battery</b></h4>
+            <p>Our software is optimized to give your device a long battery life Optimizations OS battery-friendly.</p>
           </div>
         </div>
+      </div>
+      <div class="three columns" style="padding-bottom:10px;">
+        <div class="card padding">
+          <center><img src="images/ota.png" alt="performance" style="height:50px;"></center>
+          <div class="container">
+            <h4 style="text-align:center"><b>OTA</b></h4>
+            <p>You will get the latest software updates via Over-The-Air notification.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<!-- script hamberger like menu navigation -->
+  <!-- script hamberger like menu navigation -->
 
-        <script src="js/jquery-1.11.3.min.js"></script>
-        <script>
-        $(document).ready(function () {
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script>
+    $(document).ready(function() {
 
-            $(".menu-btn a").click(function () {
-                $(".overlay").fadeToggle(200);
-                $(this).toggleClass('btn-open').toggleClass('btn-close');
-            });
-/*       this code will toggle back the overlay on click which we not need so commented out
+      $(".menu-btn a").click(function() {
+        $(".overlay").fadeToggle(200);
+        $(this).toggleClass('btn-open').toggleClass('btn-close');
+      });
+      /*       this code will toggle back the overlay on click which we not need so commented out
 
-            $('.overlay').on('click', function () {
-                $(".overlay").fadeToggle(200);
-                $(".menu-btn a").toggleClass('btn-open').toggleClass('btn-close');
-            });
-            */
+                  $('.overlay').on('click', function () {
+                      $(".overlay").fadeToggle(200);
+                      $(".menu-btn a").toggleClass('btn-open').toggleClass('btn-close');
+                  });
+                  */
 
-            $('.menu a').on('click', function () {
-                $(".overlay").fadeToggle(200);
-                $(".menu-btn a").toggleClass('btn-open').toggleClass('btn-close');
-            });
+      $('.menu a').on('click', function() {
+        $(".overlay").fadeToggle(200);
+        $(".menu-btn a").toggleClass('btn-open').toggleClass('btn-close');
+      });
 
-        });
-        </script>
-<!-- The footers for the viperOS
+    });
+  </script>
+  <!-- The footers for the viperOS
 ______________________________________________________________________-->
-<div class="container" style="padding:30px;"></div>  <!-- for the gap between cards and the footer -->
+  <div class="container" style="padding:30px;"></div>
+  <!-- for the gap between cards and the footer -->
 
-<footer class="footer-font">
-<center>
-  <a href="https://github.com/Viper-Project" target="_blank" style="text-decoration:none; color:#000000;"><i class="fa fa-github" aria-hidden="true"></i></a>
-  <a href="https://t.me/viperos_news" target="_blank" style="text-decoration:none; color:#000000;"><i class="fa fa-telegram" aria-hidden="true"></i></a>
-  <a href="https://plus.google.com/communities/112731559207528820150" target="_blank" style="text-decoration:none; color:#000000;"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
-  <a href="https://plus.google.com/communities/112731559207528820150" target="_blank" style="text-decoration:none; color:#000000;"><i class="fa fa-language" aria-hidden="true"></i></a>
-</center>
-  <center> <p style="font-size:10px;">&copy 2017 Copyright: ViperOS designed by shrikrishnajoisa and JBCDroid</p> </center>
-</footer>
+  <footer class="footer-font">
+    <center>
+      <a href="https://github.com/Viper-Project" target="_blank" style="text-decoration:none; color:#000000;"><i class="fa fa-github" aria-hidden="true"></i></a>
+      <a href="https://t.me/viperos_news" target="_blank" style="text-decoration:none; color:#000000;"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+      <a href="https://plus.google.com/communities/112731559207528820150" target="_blank" style="text-decoration:none; color:#000000;"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+      <a href="https://plus.google.com/communities/112731559207528820150" target="_blank" style="text-decoration:none; color:#000000;"><i class="fa fa-language" aria-hidden="true"></i></a>
+    </center>
+    <center>
+      <p style="font-size:10px;">&copy 2017 Copyright: ViperOS designed by falcon-head and JBCDroid</p>
+    </center>
+  </footer>
 </body>
+
 </html>
+>
